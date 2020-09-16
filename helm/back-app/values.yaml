@@ -9,7 +9,7 @@ image:
   pullPolicy: Always
   #pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.1"
+  tag: "0.0.2"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -78,3 +78,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+storage:
+  size: 5Gi
+  class: managed-premium
+  name: back-app-managed-disk
+
