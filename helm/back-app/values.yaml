@@ -11,7 +11,7 @@ image:
   pullPolicy: Always
   #pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.2"
+  tag: "0.0.3"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -67,6 +67,11 @@ resources:
   requests:
     cpu: 5m
     memory: 64Mi
+
+environments:
+  env:
+    - name: ambiente
+      value: "<seu namespace>"
 
 autoscaling:
   enabled: true

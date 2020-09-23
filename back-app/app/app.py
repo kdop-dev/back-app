@@ -1,3 +1,4 @@
+import os
 from flask import render_template, request, send_file, abort
 from flask import Flask
 import json
@@ -39,7 +40,7 @@ def show():
 @app.route("/health")
 def health():
     try:
-        return "Back-app Ok!"
+        return f"Back-app {os.environ.get('ambiente')} Ok!"
     except FileNotFoundError:
         abort(404)
 
