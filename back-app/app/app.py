@@ -40,7 +40,7 @@ def show():
 @app.route("/health")
 def health():
     try:
-        return f"Back-app {os.environ.get('ambiente')} Ok!"
+        return f"Back-app  in ns {os.environ.get('ambiente')}: Ok!"
     except FileNotFoundError:
         abort(404)
 
