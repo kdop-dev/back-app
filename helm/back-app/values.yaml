@@ -89,6 +89,4 @@ affinity: {}
 
 storage:
   size: 1Gi
-  class: managed-premium
   name: back-app-managed-disk
-
